@@ -1,0 +1,52 @@
+{
+  "name": "codex-usage-overlay",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Transparent local Codex daily usage overlay for Windows.",
+  "author": "Codex Usage Overlay",
+  "type": "module",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis",
+    "release:check": "npm test && npm run smoke:electron && npm audit --audit-level=high",
+    "smoke:electron": "electron scripts/smoke-electron.js",
+    "test": "node --test tests/unit/*.test.js tests/integration/*.test.js tests/bugs/*.test.js"
+  },
+  "build": {
+    "appId": "com.codexusage.overlay",
+    "productName": "Codex Usage Overlay",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "package.json",
+      "src/**/*",
+      "picframes/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Codex Usage Overlay"
+    }
+  },
+  "devDependencies": {
+    "@electron/asar": "^4.2.0",
+    "electron": "^41.5.0",
+    "electron-builder": "^26.8.1"
+  }
+}

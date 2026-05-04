@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Usage Overlay</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="overlay">
+      <header class="titlebar">
+        <div>
+          <p class="eyebrow">Codex usage</p>
+          <h1 id="remaining">--%</h1>
+        </div>
+        <button id="refresh" title="Refresh usage" aria-label="Refresh usage">R</button>
+      </header>
+
+      <section class="meter" aria-label="Estimated remaining daily usage">
+        <div id="meterFill"></div>
+      </section>
+
+      <section class="guidance" id="guidance">
+        <strong id="guidanceHeadline">Checking pace...</strong>
+        <span id="guidanceDetail">--</span>
+      </section>
+
+      <section class="stats">
+        <div>
+          <span id="primaryLabel">5h</span>
+          <strong id="primaryValue">--%</strong>
+          <small id="primaryReset">--</small>
+        </div>
+        <div>
+          <span id="secondaryLabel">Weekly</span>
+          <strong id="secondaryValue">--%</strong>
+          <small id="secondaryReset">--</small>
+        </div>
+      </section>
+
+      <footer>
+        <p id="status">Loading estimate...</p>
+        <p id="source"></p>
+      </footer>
+    </main>
+    <script src="./renderer.js" type="module"></script>
+  </body>
+</html>

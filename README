@@ -1,0 +1,44 @@
+Codex Usage Overlay
+===================
+
+A small Windows desktop overlay that shows Codex rate-limit usage and pacing guidance.
+
+It reads the same Codex Desktop usage endpoint used by the account menu, then shows:
+
+- remaining 5-hour usage
+- remaining weekly usage
+- reset times
+- a pacing hint such as "Use more", "Slow down", or "On track"
+
+See docs/usage-overlay.md for setup and build instructions.
+
+Privacy
+-------
+
+The app reads the local Codex Desktop auth file at ~/.codex/auth.json so it can call the Codex usage endpoint.
+It does not display or log the token.
+
+Development
+-----------
+
+Install dependencies:
+
+    npm install
+
+Run locally:
+
+    npm start
+
+Run tests:
+
+    npm test
+
+Build Windows installer:
+
+    npm run dist:win
+
+Release Model
+-------------
+
+Installer EXE files should be attached to GitHub Releases, not committed to git history.
+
