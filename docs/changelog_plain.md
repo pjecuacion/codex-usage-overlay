@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.1] - 2026-05-05
+### Fixed
+- Fixed GitHub release builds by disabling Electron Builder's implicit publish step.
+
 ## [0.5.0] - 2026-05-05
 ### Added
 - Added open-source repository files for GitHub publishing.

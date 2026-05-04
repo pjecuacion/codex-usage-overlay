@@ -1,5 +1,10 @@
 # Technical Changelog
 
+## [0.5.1] - 2026-05-05
+- Files changed: `package.json`, `package-lock.json`, `picframes/__init__.py`, `.github/workflows/release.yml`, `docs/changelog_plain.md`, `docs/changelog_tech.md`.
+- Changed `dist:win` to `electron-builder --win nsis --publish never` so `softprops/action-gh-release` owns release asset upload.
+- Set `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24` in the release job for upcoming GitHub Actions runtime changes.
+
 ## [0.5.0] - 2026-05-05
 - Files changed: `README`, `LICENSE`, `.gitignore`, `.github/workflows/release.yml`, `docs/CONTRIBUTING.md`, `docs/SECURITY.md`, `package.json`, `package-lock.json`, `picframes/__init__.py`.
 - Added GitHub release workflow triggered by `v*.*.*` tags.
