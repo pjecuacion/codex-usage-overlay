@@ -19,6 +19,16 @@ Install the latest Windows build from the GitHub Releases page:
 
 The installer is currently unsigned, so Windows may show a SmartScreen warning.
 
+## Works Out Of The Box If
+
+This app should work right away for people who:
+
+- are on Windows
+- already have Codex Desktop installed
+- are already logged in to Codex Desktop
+
+If Codex Desktop is not installed, or the user is not logged in, the overlay will not have local usage/auth data to read.
+
 ## Important Limitations
 
 This is not an official OpenAI app.
